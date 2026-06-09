@@ -2,20 +2,16 @@
 // 新位置: package:persistence_domain/features/datetime_details/jieqi_entry_strategy_store.dart
 // 请使用新版本，此文件将在未来版本移除
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:metaphysics_core/enums/datetime_strategy_enums.dart';
 
-/// 交节方案精度（用于节气与物候交接判定）
-enum JieQiEntryPrecision {
-  shichen, // 按“时辰”（2小时一段，受子时日界影响）
-  hour,    // 按小时
-  minute,  // 按分钟（推荐）
-  second,  // 按秒（最严格）
-}
+// JieQiEntryPrecision 已迁移至 enums/datetime_strategy_enums.dart
+// 此处仅保留 JieQiEntryStrategyStore 用于向后兼容
 
 @Deprecated('Migrated to package:metaphysics_core/features/datetime_details/jieqi_entry_strategy_store.dart. Use the new location.')
 class JieQiEntryStrategyStore {
   static const String _spKey = 'calc_jieqi_entry_precision_default';
 
-  /// 默认推荐使用“分钟”
+  /// 默认推荐使用"分钟"
   static JieQiEntryPrecision current = JieQiEntryPrecision.minute;
 
   static Future<void> initFromPrefs() async {

@@ -1,0 +1,27 @@
+name: metaphysics_core
+description: Core enums and domain models for Xuan Metaphysics projects (Pure Dart).
+version: 0.1.1
+publish_to: "none"
+
+environment:
+  sdk: ">=3.8.0 <4.0.0"
+
+dependencies:
+  equatable: ^2.0.8
+  json_annotation: ^4.10.0
+  intl: ^0.20.2
+  collection: ^1.19.1
+  tyme: ^1.4.1
+  tuple: ^2.0.2
+  uuid: ^4.5.2
+  logger: ^2.4.0
+  timezone: ^0.9.3
+  flutter_timezone: ^5.0.1
+  sweph: ^3.2.1+2.10.3
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  test: ^1.25.0
+  lints: ^5.0.0
+  build_runner: ^2.10.5
+  json_serializable: ^6.12.0

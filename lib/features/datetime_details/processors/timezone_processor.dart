@@ -1,0 +1,168 @@
+import 'package:timezone/timezone.dart' as tz;
+import '../../../models/calculation_strategy_config_logic_model.dart';
+import '../../../models/chinese_date_info.dart';
+import '../../../helpers/solar_lunar_datetime_helper.dart';
+
+class TimezoneProcessor {
+  static Future<TimezoneProcessResult> process({
+    required DateTime inputDateTime,
+    required String timezoneStr,
+    CalculationStrategyConfigLogicModel config = CalculationStrategyConfigLogicModel.defaultConfig,
+  }) async {
+    // 获取时区信息
+    final location = tz.getLocation(timezoneStr);
+
+    // 转换为指定时区的时间
+    // 如果是本地时间，将其视为目标时区的挂钟时间 (Wall Time)
+    // 如果是 UTC 时间，则进行绝对时刻转换
+    final tz.TZDateTime standardDateTime;
+    if (inputDateTime.isUtc) {
+      standardDateTime = tz.TZDateTime.from(inputDateTime, location);
+    } else {
+      standardDateTime = tz.TZDateTime(
+        location,
+        inputDateTime.year,
+        inputDateTime.month,
+        inputDateTime.day,
+        inputDateTime.hour,
+        inputDateTime.minute,
+        inputDateTime.second,
+        inputDateTime.millisecond,
+        inputDateTime.microsecond,
+      );
+    }
+
+    // 转换为UTC时间
+    final utcDateTime = standardDateTime.toUtc();
+
+    // 获取时区详细信息
+    final timezoneInfo = _getTimezoneInfo(location, standardDateTime);
+
+    // 计算中国日期信息
+    final chineseInfo = SolarLunarDateTimeHelper.cacluateChineseDateInfoV2(
+      standardDateTime,
+      config,
+    );
+
+    return TimezoneProcessResult(
+      inputDateTime: inputDateTime,
+      standardDateTime: standardDateTime,
+      utcDateTime: utcDateTime,
+      chineseInfo: chineseInfo,
+      timezoneInfo: timezoneInfo,
+    );
+  }
+
+  /// Retrieves detailed timezone information for a given `TZDateTime`.
+  ///
+  /// This method extracts the timezone name, abbreviation, and whether it's currently in Daylight Saving Time (DST).
+  /// It calculates both the current UTC offset and the standard (non-DST) offset.
+  ///
+  /// [location] The `tz.Location` object representing the timezone.
+  /// [dateTime] The `tz.TZDateTime` for which to get the timezone info.
+  ///
+  /// Returns a `TimezoneInfo` object containing the detailed timezone information.
+  static TimezoneInfo _getTimezoneInfo(
+    tz.Location location,
+    tz.TZDateTime dateTime,
+  ) {
+    final timeZone = dateTime.timeZone;
+
+    // 获取标准偏移量（非夏令时偏移量）
+    final Duration standardOffset;
+    if (timeZone.isDst) {
+      // 如果当前是夏令时，查找同一年1月份的偏移量作为标准偏移量
+      final winterDate = tz.TZDateTime(location, dateTime.year, 1, 1);
+      standardOffset = Duration(milliseconds: winterDate.timeZone.offset);
+    } else {
+      standardOffset = Duration(milliseconds: timeZone.offset);
+    }
+
+    final currentOffset = Duration(milliseconds: timeZone.offset);
+
+    return TimezoneInfo(
+      name: location.name,
+      abbreviation: timeZone.abbreviation,
+      offset: currentOffset,
+      standardOffset: standardOffset,
+      isDST: timeZone.isDst,
+    );
+  }
+
+  /// 验证时区字符串的有效性
+  static bool isValidTimezone(String timezoneStr) {
+    try {
+      tz.getLocation(timezoneStr);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  /// 获取常用时区列表
+  static List<String> getCommonTimezones() {
+    return [
+      'Asia/Shanghai',
+      'Asia/Hong_Kong',
+      'Asia/Taipei',
+      'Asia/Tokyo',
+      'America/New_York',
+      'America/Los_Angeles',
+      'Europe/London',
+      'Europe/Paris',
+      'UTC',
+    ];
+  }
+}
+
+class TimezoneProcessResult {
+  final DateTime inputDateTime;
+  final DateTime standardDateTime;
+  final DateTime utcDateTime;
+  final ChineseDateInfo chineseInfo;
+  final TimezoneInfo timezoneInfo;
+
+  TimezoneProcessResult({
+    required this.inputDateTime,
+    required this.standardDateTime,
+    required this.utcDateTime,
+    required this.chineseInfo,
+    required this.timezoneInfo,
+  });
+
+  /// 获取时区处理摘要
+  Map<String, dynamic> getSummary() {
+    return {
+      'timezone': timezoneInfo.name,
+      'offsetHours': timezoneInfo.offsetHours,
+      'isDST': timezoneInfo.isDST,
+      'inputTime': inputDateTime.toIso8601String(),
+      'standardTime': standardDateTime.toIso8601String(),
+      'utcTime': utcDateTime.toIso8601String(),
+    };
+  }
+}
+
+class TimezoneInfo {
+  final String name;
+  final String abbreviation;
+  final Duration offset;
+  final Duration standardOffset;
+  final bool isDST;
+  late final double offsetHours;
+  late final double standardOffsetHours;
+
+  TimezoneInfo({
+    required this.name,
+    required this.abbreviation,
+    required this.offset,
+    required this.standardOffset,
+    required this.isDST,
+  }) {
+    offsetHours = offset.inMilliseconds / (1000 * 60 * 60);
+    standardOffsetHours = standardOffset.inMilliseconds / (1000 * 60 * 60);
+  }
+
+  /// 获取夏令时偏移
+  double get dstOffsetHours => offsetHours - standardOffsetHours;
+}

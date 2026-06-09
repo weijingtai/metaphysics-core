@@ -1,0 +1,6 @@
+.dart_tool/
+.codegraph/
+.understand-anything/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.g.dart

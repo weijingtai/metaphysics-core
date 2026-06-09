@@ -1,0 +1,1527 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "a51504a72b920d5781a0dfd4df0a27c0f69f1a40",
+  "generatedAt": "2026-06-05T00:35:37.793Z",
+  "files": {
+    "lib/adapters/lunar_adapter.dart": {
+      "filePath": "lib/adapters/lunar_adapter.dart",
+      "contentHash": "6510b896feb14cc5f4467491357c4d5a85e796e90511ac1fdf1b0770f3be95dc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 222,
+      "hasStructuralAnalysis": false
+    },
+    "lib/da_yun_logic.dart": {
+      "filePath": "lib/da_yun_logic.dart",
+      "contentHash": "b317b4bb141fb7222ba5853dc75ac1e07d873e984b733b0d2c921a26c273f476",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "lib/da_yun_repository.dart": {
+      "filePath": "lib/da_yun_repository.dart",
+      "contentHash": "d9e61aa3111566136bb3bdc1090ab84c374d0913627adfa2382cb63ba4cf5f91",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/base_divination_datetime_datamodel.dart": {
+      "filePath": "lib/datamodel/base_divination_datetime_datamodel.dart",
+      "contentHash": "2639d87f00529cbc9c3843ccaf652913beb9e2a586b361e08a16891e5f233f30",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 77,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/basic_diviation_info.dart": {
+      "filePath": "lib/datamodel/basic_diviation_info.dart",
+      "contentHash": "97757f51e6662327b97605a438c4f965d7ddb2d03485505acacfd3495a21b8e1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 48,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/basic_person_info.dart": {
+      "filePath": "lib/datamodel/basic_person_info.dart",
+      "contentHash": "2625f36789a46ab890db1ebcd6d58051825e3bd7f19615c7f4cabc01550ba61b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 65,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/datetime_divination_datamodel.dart": {
+      "filePath": "lib/datamodel/datetime_divination_datamodel.dart",
+      "contentHash": "03920cbf75883760816ec87a1fb0b776250b29cb66ade6c39ffed6d025c50e95",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/divination_data_model.dart": {
+      "filePath": "lib/datamodel/divination_data_model.dart",
+      "contentHash": "5978286d47855e6bb56b90367619f8b8ae3a188e9ba6b77c4fe98feb5609172b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 64,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/divination_request_info_datamodel.dart": {
+      "filePath": "lib/datamodel/divination_request_info_datamodel.dart",
+      "contentHash": "0f6f88e6e7b5fb567207d5232ace39821786c9fdd6ecf3c806a5499df952007f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 64,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/divination_type_data_model.dart": {
+      "filePath": "lib/datamodel/divination_type_data_model.dart",
+      "contentHash": "cbf1a0c1fff5e281fb1571c9e4c51a343d788d591883eee0c3e3ed39c249e0d9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/geo_location.dart": {
+      "filePath": "lib/datamodel/geo_location.dart",
+      "contentHash": "993428c4c142a41cfe3583c48fb8c3bf2af81bb79626d5e16b38004947e82ef9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 88,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/location.dart": {
+      "filePath": "lib/datamodel/location.dart",
+      "contentHash": "51b217152ba5c88c904bc9662a5586b81f2070c1a51da7c5c705a98ca5d0fa74",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 164,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/observer_datamodel.dart": {
+      "filePath": "lib/datamodel/observer_datamodel.dart",
+      "contentHash": "fa0401c4a95b82ba52679b012d56c3f9f27157743d296fb5af73cb8f87d14b57",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 56,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/seeker_model.dart": {
+      "filePath": "lib/datamodel/seeker_model.dart",
+      "contentHash": "2f084b55c195293f05c4ae63dc68cc304230a693531d54da3ec99f0801f8e061",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/sub_divination_type_data_model.dart": {
+      "filePath": "lib/datamodel/sub_divination_type_data_model.dart",
+      "contentHash": "9adcbd2cd85ae3de87e5cebf1a3d5bf4c3197dad88d59dac50cbd5207b221b6c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/timing_divination_model.dart": {
+      "filePath": "lib/datamodel/timing_divination_model.dart",
+      "contentHash": "f86ee3ea96f75f7f7a8bd6c9507c58c548175d204dd85d9ac6b837e6b1745741",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datamodel/world_info.dart": {
+      "filePath": "lib/datamodel/world_info.dart",
+      "contentHash": "aa3d123526bcf29408766f84851e0076b3b3b4e32bbcbc49758e84b8d1aedcf1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 220,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datetime_logic.dart": {
+      "filePath": "lib/datetime_logic.dart",
+      "contentHash": "8c19a346c6263f4d3b52522b61a666ecfe1226259d676a3b71eea793f1e1609f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    "lib/datetime_repository.dart": {
+      "filePath": "lib/datetime_repository.dart",
+      "contentHash": "dec4fddad7f5d47d0d2dc19fcea37491bb5965cbcb4ae2bbf4922a49972825c4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/da_yun/da_yun/da_yun_calculator.dart": {
+      "filePath": "lib/domain/calculators/da_yun/da_yun/da_yun_calculator.dart",
+      "contentHash": "d3c0a231fdef4447ac4125b8b916d8357ab856e742750a19ec21a9bbd2f32f47",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 114,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/da_yun/da_yun_calculator.dart": {
+      "filePath": "lib/domain/calculators/da_yun/da_yun_calculator.dart",
+      "contentHash": "d3c0a231fdef4447ac4125b8b916d8357ab856e742750a19ec21a9bbd2f32f47",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 114,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/four_zhu/four_zhu_engine.dart": {
+      "filePath": "lib/domain/calculators/four_zhu/four_zhu_engine.dart",
+      "contentHash": "8607455d2cfbfc195c41f12e55199cee48bcf97d8eb12105273ea0b345c5ab0e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 436,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/four_zhu/strategies/day_pillar_strategy.dart": {
+      "filePath": "lib/domain/calculators/four_zhu/strategies/day_pillar_strategy.dart",
+      "contentHash": "c4483ee3f2571d8a71e7a9486141fb5c62137076b186dca173822125c763ebda",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/four_zhu/strategies/hour_pillar_strategy.dart": {
+      "filePath": "lib/domain/calculators/four_zhu/strategies/hour_pillar_strategy.dart",
+      "contentHash": "df7d911cf007ddb28017d6dbbbcf98a92ce365aad44fbe5e5036ea294ccc9588",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/four_zhu/strategies/impl/day_0_boundary_strategy.dart": {
+      "filePath": "lib/domain/calculators/four_zhu/strategies/impl/day_0_boundary_strategy.dart",
+      "contentHash": "ff027b70aa1335a0a0c2fd7d5b8281a91bdf0df217eb1b6efd124178e02a5c7c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/four_zhu/strategies/impl/day_23_boundary_strategy.dart": {
+      "filePath": "lib/domain/calculators/four_zhu/strategies/impl/day_23_boundary_strategy.dart",
+      "contentHash": "58fdff781e2f84917992fa152d257552787fb98898f938794d388ea02ab9f7bc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/four_zhu/strategies/impl/hour_bands_start0_strategy.dart": {
+      "filePath": "lib/domain/calculators/four_zhu/strategies/impl/hour_bands_start0_strategy.dart",
+      "contentHash": "87f6ca6302344c3e2ad80eff46a4869f2024ea87df1ad86b22b767e7ae821693",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/four_zhu/strategies/impl/hour_five_mouse_dun_strategy.dart": {
+      "filePath": "lib/domain/calculators/four_zhu/strategies/impl/hour_five_mouse_dun_strategy.dart",
+      "contentHash": "921c4be669079476dd3a3cf3bdb530c356bf2f241ae07d7507004bb4bcff2220",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/four_zhu/strategies/impl/hour_fixed_zi_ping_strategy.dart": {
+      "filePath": "lib/domain/calculators/four_zhu/strategies/impl/hour_fixed_zi_ping_strategy.dart",
+      "contentHash": "50d4c54c19cee25b1a7cbe5003f5dae5468b10b3ed9359344d24c87176374073",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 76,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/liu_yun/liu_yun.dart": {
+      "filePath": "lib/domain/calculators/liu_yun/liu_yun.dart",
+      "contentHash": "bb422b03394825f625ef9027be00bfa06cbf6492f3df2d53d2c81cb49d466be8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/liu_yun/models/yun_liu_display_models.dart": {
+      "filePath": "lib/domain/calculators/liu_yun/models/yun_liu_display_models.dart",
+      "contentHash": "86c91ed6360d5076750173037c41eb98b60b12b1000251c2cb939b0ac75bf9d1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 82,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/liu_yun/services/yun_liu_service.dart": {
+      "filePath": "lib/domain/calculators/liu_yun/services/yun_liu_service.dart",
+      "contentHash": "5c1f2f089aeb42edbd30ff7c7cefedb361786206301a90961d328f41d2d96b6f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 273,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/liu_yun/themes/ink_theme.dart": {
+      "filePath": "lib/domain/calculators/liu_yun/themes/ink_theme.dart",
+      "contentHash": "cc8b835c8fbc7fa8e008023a881bfbb399a05ddfcff5517731bceab93c896f8c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 96,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/tai_yuan/calculators/birthday_countback_calculator.dart": {
+      "filePath": "lib/domain/calculators/tai_yuan/calculators/birthday_countback_calculator.dart",
+      "contentHash": "e90773c69193b107bf67e01c0ee63dcd4d6d93fdab29ba3880a03f09c6d2b2c9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 102,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/tai_yuan/calculators/day_master_yinyang_calculator.dart": {
+      "filePath": "lib/domain/calculators/tai_yuan/calculators/day_master_yinyang_calculator.dart",
+      "contentHash": "adc2d7bb4963d736abe158a6d9a1284086c9857ec6b921465b60eab6d450ce86",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 70,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/tai_yuan/calculators/direct_conception_calculator.dart": {
+      "filePath": "lib/domain/calculators/tai_yuan/calculators/direct_conception_calculator.dart",
+      "contentHash": "0a757cbde8079d94beb50a2b0653b77d6f744e3b798c44313ca026036907c3d9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 77,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/tai_yuan/calculators/month_pillar_calculator.dart": {
+      "filePath": "lib/domain/calculators/tai_yuan/calculators/month_pillar_calculator.dart",
+      "contentHash": "9d2fd51344bf18e71b3f839ef257d555d8315cb28b568ad6a1610019a68f01d6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 73,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/tai_yuan/enum_calculate_strategy.dart": {
+      "filePath": "lib/domain/calculators/tai_yuan/enum_calculate_strategy.dart",
+      "contentHash": "ed352028ffa223f99adfa2b2530ae8133978cf712ab779f97dfa53fe39492acc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 57,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/tai_yuan/tai_yuan_by_days_model.dart": {
+      "filePath": "lib/domain/calculators/tai_yuan/tai_yuan_by_days_model.dart",
+      "contentHash": "37bbd4573e3302e795c4cd478ebb51e1df9ead567cf635a571750d02f1229ed7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/tai_yuan/tai_yuan_calculator.dart": {
+      "filePath": "lib/domain/calculators/tai_yuan/tai_yuan_calculator.dart",
+      "contentHash": "36abc623470d569402f283581b15aacff6b14cfeb264467ee5c79f05aa1c3cbf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/tai_yuan/tai_yuan_calculator_factory.dart": {
+      "filePath": "lib/domain/calculators/tai_yuan/tai_yuan_calculator_factory.dart",
+      "contentHash": "616accbe2b54d64e8dc64ac88d893ee8a38a69f257caf54502b46dea4d495e5c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/calculators/tai_yuan/tai_yuan_model.dart": {
+      "filePath": "lib/domain/calculators/tai_yuan/tai_yuan_model.dart",
+      "contentHash": "cb8a2ecc0ff1296b28f1bf27e1ac87016940ff889c3d987f30fd42c238b27524",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 135,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/gui/window_manager.dart": {
+      "filePath": "lib/domain/gui/window_manager.dart",
+      "contentHash": "f68ddcdbfb621943438024170492bb458762293f4478af3b9a547399a0ad39d3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 41,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/models/jie_qi_info.dart": {
+      "filePath": "lib/domain/models/jie_qi_info.dart",
+      "contentHash": "e0c778e6ef40d9755dbcc74fa6716bbc1e1c52aba28ffd7c3305a4cbc7f84dbe",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/usecases/apply_pillar_preset_use_case.dart": {
+      "filePath": "lib/domain/usecases/apply_pillar_preset_use_case.dart",
+      "contentHash": "44bc9785a62829bc91c8b8a9bc85da8b36b4754ffb006b5847c12f0b1a6c1a29",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": false
+    },
+    "lib/domain/usecases/get_da_yun_use_case.dart": {
+      "filePath": "lib/domain/usecases/get_da_yun_use_case.dart",
+      "contentHash": "e9279c0df0b819a043fbd86de93bf9f62fcbf01f957fd4207d542e2347c1fb7c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums.dart": {
+      "filePath": "lib/enums.dart",
+      "contentHash": "63402d877859ad22c4fcbed170298a025947e10c1619e3c4fa8d6e1f1d2d8f15",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/datetime_strategy_enums.dart": {
+      "filePath": "lib/enums/datetime_strategy_enums.dart",
+      "contentHash": "a81568d2f3b16827e73f7cde8d9b470adf54ec72f3dc7cec2a588ba673710039",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 83,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_28_constellations.dart": {
+      "filePath": "lib/enums/enum_28_constellations.dart",
+      "contentHash": "66fb0dce9e4326d205f20ec7dc1cf5a5f436155f858876aa806316e1b96b50c6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 108,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_chinese_12_zodic.dart": {
+      "filePath": "lib/enums/enum_chinese_12_zodic.dart",
+      "contentHash": "4cea49e84ad3d6dfb1bc010edf17d15dfa158d35cf9f9e72365f07d46305fd4e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_datetime_type.dart": {
+      "filePath": "lib/enums/enum_datetime_type.dart",
+      "contentHash": "8649077f3c0a8145788e4034fb22e656618ca10942eb58638964d0ef05a5d140",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_day_night.dart": {
+      "filePath": "lib/enums/enum_day_night.dart",
+      "contentHash": "66289f691040a8e0b51723e1f2b076ac0cc3ffbe9f46899346f091d084c504be",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_device_type.dart": {
+      "filePath": "lib/enums/enum_device_type.dart",
+      "contentHash": "89502971aee38e80a74a35c455922c2f17105783b8bc5d46641e9ea9167a1dfc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_di_zhi.dart": {
+      "filePath": "lib/enums/enum_di_zhi.dart",
+      "contentHash": "7ac2cdcb6799fc8820d3c87d8ea7c94ce84ffd329753f1963ef5b0434ca80b78",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 786,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_divinate_type.dart": {
+      "filePath": "lib/enums/enum_divinate_type.dart",
+      "contentHash": "a59e0c3232a2974277b4fe7bc52e0ef55561479021bd36c3d255ccd2b24f4f21",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 20,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_five_xing.dart": {
+      "filePath": "lib/enums/enum_five_xing.dart",
+      "contentHash": "13b709630f51773847b0d47842cba349bf200ee7b5035d2d508ce5bb5837b289",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_five_xing_relationship.dart": {
+      "filePath": "lib/enums/enum_five_xing_relationship.dart",
+      "contentHash": "d6b1b6df34c8f890d5a8f9013cf08ac2a7fb31be64b80deb31c149abc862d155",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 290,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_four_seasons.dart": {
+      "filePath": "lib/enums/enum_four_seasons.dart",
+      "contentHash": "57900afe0d2dd94f649928c8a282e6b9f9048d77431fb223c07b9cdbab2389e0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_gender.dart": {
+      "filePath": "lib/enums/enum_gender.dart",
+      "contentHash": "ebbacd7de5faee639d59f897701d710547f539107c86ece59acd277a9dd06626",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_hou_tian_gua.dart": {
+      "filePath": "lib/enums/enum_hou_tian_gua.dart",
+      "contentHash": "83f2d8acf531d713ac2d3eb0ae3185c4e25af4561c8052d9ad1ff4b5f9462a77",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 224,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_ji_xiong.dart": {
+      "filePath": "lib/enums/enum_ji_xiong.dart",
+      "contentHash": "2666ff584d1b1e6af1056f72088c0127592ab22bac11e0d4f383948d30d2180d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_jia_zi.dart": {
+      "filePath": "lib/enums/enum_jia_zi.dart",
+      "contentHash": "f39270bf8a965b74013dad528c00b7a9de724f0637888c65f9eb229cabd38c5b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 557,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_liu_qin.dart": {
+      "filePath": "lib/enums/enum_liu_qin.dart",
+      "contentHash": "eb01234c897732a7ace99733e3f31dcb48c3b2ade42070d959ba2b83fa210141",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_month_general.dart": {
+      "filePath": "lib/enums/enum_month_general.dart",
+      "contentHash": "e1d57243d9789d776fa6284d81f0c4ea92e65d95b61d062667df946eaf8f623b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 97,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_month_token.dart": {
+      "filePath": "lib/enums/enum_month_token.dart",
+      "contentHash": "2f1a82e4bba339ead7aeb9b3a92fe1fb8134026ec92da736e71167d9f6b3c0ff",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 29,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_panel_type.dart": {
+      "filePath": "lib/enums/enum_panel_type.dart",
+      "contentHash": "a660ce5c42661161ee16398f12e2aa3c54b9375a7dbf1d3121413808179fa37f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_query_type.dart": {
+      "filePath": "lib/enums/enum_query_type.dart",
+      "contentHash": "c4f5871e9800fc3661c262264c51970f3855e8bb1907ee2f0045e9a67ab9d97e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_stars.dart": {
+      "filePath": "lib/enums/enum_stars.dart",
+      "contentHash": "95f928e69004c71988d3ec7438a050d4ba7c682b688f302481a42c943a84e75e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 150,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_ten_gods.dart": {
+      "filePath": "lib/enums/enum_ten_gods.dart",
+      "contentHash": "9648ff290211a13f4e9218e42abb509b2d39b2971c43c397ec0793b8040192d3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 19,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_three_yuan.dart": {
+      "filePath": "lib/enums/enum_three_yuan.dart",
+      "contentHash": "1a0b3ccbd2636d5f77d40bc42d412927f14f175560970f38face6bce2176f0ff",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 99,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_tian_gan.dart": {
+      "filePath": "lib/enums/enum_tian_gan.dart",
+      "contentHash": "d41bcbe50565696b973331f95c23b693a7da5f921ee762135d09209e5eedb813",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 297,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_twelve_ecliptic_gong.dart": {
+      "filePath": "lib/enums/enum_twelve_ecliptic_gong.dart",
+      "contentHash": "1a140175b52ae2c32599717a882b49e7040732fa0d1b109a3b2566a36ed34674",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_twelve_star_seq.dart": {
+      "filePath": "lib/enums/enum_twelve_star_seq.dart",
+      "contentHash": "3949e711d3e98eceb862f99d4a547f2955ec2f7d3246da7c95e28e4e98032511",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_twelve_zhang_sheng.dart": {
+      "filePath": "lib/enums/enum_twelve_zhang_sheng.dart",
+      "contentHash": "5e23c75c38502e51fc1e482786d2ad17587a4fdba8c1ce2f6f3411a57efa7d06",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 304,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_twenty_four_jie_qi.dart": {
+      "filePath": "lib/enums/enum_twenty_four_jie_qi.dart",
+      "contentHash": "46c6c101cc863551766066e53f0042cf50b0e6f1fb0ad70010cf0f3ed058e419",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 195,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/enum_yin_yang.dart": {
+      "filePath": "lib/enums/enum_yin_yang.dart",
+      "contentHash": "ad78a3b977a854f4b7890ae3dcb239f72be784ba6410298da5f791bdcfefcfed",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/layout_template_enums.dart": {
+      "filePath": "lib/enums/layout_template_enums.dart",
+      "contentHash": "ad077832db4f2dc36e3ded0f5768b0c3fb71d60e6b2d1a49b68923f9b2aa619e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 93,
+      "hasStructuralAnalysis": false
+    },
+    "lib/enums/nine_star.dart": {
+      "filePath": "lib/enums/nine_star.dart",
+      "contentHash": "efda55f44a1b7f8502c652cfb6d3aacb3c638c12c670a69480a2f000cc2b5fba",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 206,
+      "hasStructuralAnalysis": false
+    },
+    "lib/features/datetime_details/datetime_details_bundle_calculation.dart": {
+      "filePath": "lib/features/datetime_details/datetime_details_bundle_calculation.dart",
+      "contentHash": "260042fefdb23c015304acaa8a2e3eefca9d8dbf6816989bf218f7ce18940a4d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 193,
+      "hasStructuralAnalysis": false
+    },
+    "lib/features/datetime_details/jieqi_entry_strategy_store.dart": {
+      "filePath": "lib/features/datetime_details/jieqi_entry_strategy_store.dart",
+      "contentHash": "621cf93bba8b87f19d137bd2d6d5e19cbb09bf9c8427df1db8d53ecad17de9a9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 51,
+      "hasStructuralAnalysis": false
+    },
+    "lib/features/datetime_details/mermaid.md": {
+      "filePath": "lib/features/datetime_details/mermaid.md",
+      "contentHash": "5fef1d6141668419384813fcd3292e01cb988b048359f034bbf0f0a9645383d3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": true
+    },
+    "lib/features/datetime_details/processors/dst_processor.dart": {
+      "filePath": "lib/features/datetime_details/processors/dst_processor.dart",
+      "contentHash": "11671d75dbe778b15c6a45b0f2be90db498f829feb848ac6b1812820b84c8b8d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 206,
+      "hasStructuralAnalysis": false
+    },
+    "lib/features/datetime_details/processors/solar_time_processor.dart": {
+      "filePath": "lib/features/datetime_details/processors/solar_time_processor.dart",
+      "contentHash": "cdf7bbc2fb386aae36111b45a33ffb5d933f47aa4fd592b5c6a9a29ed5568573",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 195,
+      "hasStructuralAnalysis": false
+    },
+    "lib/features/datetime_details/processors/timezone_processor.dart": {
+      "filePath": "lib/features/datetime_details/processors/timezone_processor.dart",
+      "contentHash": "2c80c418bfb5e79fc5a65a4530da6820102ffb3afb7f4e0a5689712ce591fef1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 169,
+      "hasStructuralAnalysis": false
+    },
+    "lib/four_zhu_logic.dart": {
+      "filePath": "lib/four_zhu_logic.dart",
+      "contentHash": "ed9eb6a1a1cd15a1c4e89b730488211a423f45904f2c2f822d26f5ff7ed219bb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "lib/four_zhu_repository.dart": {
+      "filePath": "lib/four_zhu_repository.dart",
+      "contentHash": "f216b88e27bd6c06fc023c0bdc25e00972de6c46dadf62d98179a0cfcbb0e087",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "lib/four_zhu_ui.dart": {
+      "filePath": "lib/four_zhu_ui.dart",
+      "contentHash": "717314a49bc654bb7114db264d5437f74bd70272bf5d0f97d93042fa9b4959cd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "lib/helpers/solar_lunar_datetime_helper.dart": {
+      "filePath": "lib/helpers/solar_lunar_datetime_helper.dart",
+      "contentHash": "7c1084c22e5fd720a157eaaeb9fbf650bcf1bd5ed4bdd7b02a9d7e38eaa45cd2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1356,
+      "hasStructuralAnalysis": false
+    },
+    "lib/helpers/solar_time_calculator.dart": {
+      "filePath": "lib/helpers/solar_time_calculator.dart",
+      "contentHash": "ea727713e2e97c125f5626935b81540a760441213b269b08cd1ebc3a69a930c5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 75,
+      "hasStructuralAnalysis": false
+    },
+    "lib/metaphysics_core.dart": {
+      "filePath": "lib/metaphysics_core.dart",
+      "contentHash": "e3d1d1d07ce79452a86eada42693ba5d4571b5f5014823e758d097d67f13416f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models.dart": {
+      "filePath": "lib/models.dart",
+      "contentHash": "22ff1a41809fe607b07786c0af44ab0e0b80013227673fc5bfef4bf5844683b4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/ConstantNineGongDataClass.dart": {
+      "filePath": "lib/models/ConstantNineGongDataClass.dart",
+      "contentHash": "d8ef21838041dfa2af42565d7371728a313c03eb8ea0ce0c994555acb5c4953e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/calculation_strategy_config_logic_model.dart": {
+      "filePath": "lib/models/calculation_strategy_config_logic_model.dart",
+      "contentHash": "967f601f6bb6d7fd7498b147530724e82e15cb226e971b5974e9cce1871aaf0c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 70,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/card_template_setting.dart": {
+      "filePath": "lib/models/card_template_setting.dart",
+      "contentHash": "0451872b3e227f8eb74950c69a498af9198761526d5556cfe00d8b658c3a309f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 118,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/chinese_date_info.dart": {
+      "filePath": "lib/models/chinese_date_info.dart",
+      "contentHash": "bfe4dc486b91ce86a51f468d10870286e30c218e1b0f79edb6ef17f033d1807e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 73,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/da_yun_pillar.dart": {
+      "filePath": "lib/models/da_yun_pillar.dart",
+      "contentHash": "9715397bc2ce4d30d1933df3db023da1ee78f0250650aca2cfd603ae54ba0774",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 20,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/datetime_details_bundle_logic_model.dart": {
+      "filePath": "lib/models/datetime_details_bundle_logic_model.dart",
+      "contentHash": "a52cfe7ddeed9122669660805db9736fe74f2757547890c453cbb6a7862b8058",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 74,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/divination_datetime.dart": {
+      "filePath": "lib/models/divination_datetime.dart",
+      "contentHash": "18509fe43291a9b6ebbb0d3ecab398ff3673267050e4a6a30faf4490c59afc32",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 336,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/divination_info_model.dart": {
+      "filePath": "lib/models/divination_info_model.dart",
+      "contentHash": "f8537ceb503641065d4b4f3c600de05df86cfd21844b73656f1ed1c17f9eef24",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/eight_chars.dart": {
+      "filePath": "lib/models/eight_chars.dart",
+      "contentHash": "437316612177f63cac40836ea2c0dd1876e640bb1940e358ff8cad14e0f754bd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 118,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/enums.dart": {
+      "filePath": "lib/models/enums.dart",
+      "contentHash": "02badc57434a31a8e1ede7acbd9e41cce27129f85bb99c5a46eac575a8f7c8d7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/four_zhu_text.dart": {
+      "filePath": "lib/models/four_zhu_text.dart",
+      "contentHash": "ea7c56ef6226eda69c8a922daba99add5cc87de11f6e91ef21c689871a8b8e1e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/geographic_point.dart": {
+      "filePath": "lib/models/geographic_point.dart",
+      "contentHash": "3156d3200e5604f1eca202eaa31a033c0d3750a8a6aed7a94477e62deeda4688",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 27,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/jie_qi_info.dart": {
+      "filePath": "lib/models/jie_qi_info.dart",
+      "contentHash": "574abd3bdc06d29703fa06a20d399a023ab4400b3b16256bc025628e1594b42e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/lunar_date_info_v2_data.dart": {
+      "filePath": "lib/models/lunar_date_info_v2_data.dart",
+      "contentHash": "7492df57df64fbf979d94e003caccdd4e4a9ce69ed60fda0fd1dcfffbae1745e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/lunar_date_info_v2_logic_model.dart": {
+      "filePath": "lib/models/lunar_date_info_v2_logic_model.dart",
+      "contentHash": "5cab0b3065e0610072413726041fbff64a79fc19ebda83dfe0fdc9581f4a9cd3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 50,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/pillar_preset.dart": {
+      "filePath": "lib/models/pillar_preset.dart",
+      "contentHash": "215bbae3284f9bb924545632aeb59da40e65dd914efce5cec18d0c0d6d899ec7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 19,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/seventy_two_phenology.dart": {
+      "filePath": "lib/models/seventy_two_phenology.dart",
+      "contentHash": "b1633d05e7a647594a1128071a07723bfc36da5dae9ce17f6d8c2787c45a158f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 433,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/shen_sha.dart": {
+      "filePath": "lib/models/shen_sha.dart",
+      "contentHash": "5180fa7c298b4c3f34b00729978c58bbe213651fdc4f8d25ffaf8d20210de71c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 61,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/shen_sha_bundled.dart": {
+      "filePath": "lib/models/shen_sha_bundled.dart",
+      "contentHash": "5a42dac31067e82544313fa0f6a24538cae9feda834fd03ec685427897e6d4dc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 54,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/shen_sha_di_zhi.dart": {
+      "filePath": "lib/models/shen_sha_di_zhi.dart",
+      "contentHash": "558649380f30e749e9ef117defbb33ce4985e35be2df67afadac28e5675d9d93",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/shen_sha_gan_zhi.dart": {
+      "filePath": "lib/models/shen_sha_gan_zhi.dart",
+      "contentHash": "df7fc86646e76ca9a44ef5df83bba3903a42e7aac1b6d60620b5e808f2cffa3d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/shen_sha_tian_gan.dart": {
+      "filePath": "lib/models/shen_sha_tian_gan.dart",
+      "contentHash": "98357312a53b1ce5ec8b4103c43bd9d663497e9d7418042c5fe518170bb39e48",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/sp_location_datamodel.dart": {
+      "filePath": "lib/models/sp_location_datamodel.dart",
+      "contentHash": "d2fb6d28e29478dd1fd982295b11905db27742f3c78ad60da5857d086dd1f855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 76,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/template_preset.dart": {
+      "filePath": "lib/models/template_preset.dart",
+      "contentHash": "76c36bd0ae44846b7e8eae5e75f5018bbab0639b137051110bb5bdaabedc74f1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 241,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/twelve_zhang_sheng.dart": {
+      "filePath": "lib/models/twelve_zhang_sheng.dart",
+      "contentHash": "0a88c3ca7bae92a67f8b0529fa9d495c19818799aedf900ff79b18111c230679",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/year_month.dart": {
+      "filePath": "lib/models/year_month.dart",
+      "contentHash": "51be54254f9c9d18c019c74d890517fb16ab149fe9f1a369437a6613b594f845",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 217,
+      "hasStructuralAnalysis": false
+    },
+    "lib/models/yun_yun_info.dart": {
+      "filePath": "lib/models/yun_yun_info.dart",
+      "contentHash": "240a3971dc2bbe9ff82b078b3191133f1f3b0b53d80211b4edd2f7413b7ace0f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 171,
+      "hasStructuralAnalysis": false
+    },
+    "lib/ports/eight_chars_info_repository.dart": {
+      "filePath": "lib/ports/eight_chars_info_repository.dart",
+      "contentHash": "f94e64f18d0bb64c7ad6e4d951e1ab6fd04f50dc4c761c4043d345b0a65e6a53",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/da_yun/logic/da_yun_logic_model.dart": {
+      "filePath": "lib/src/da_yun/logic/da_yun_logic_model.dart",
+      "contentHash": "458aee05e00b893261a9907cd614d4b786b9bfcfac7c6b5e12fcccfe79cb0ab7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 49,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/da_yun/repository/da_yun_record_data_model.dart": {
+      "filePath": "lib/src/da_yun/repository/da_yun_record_data_model.dart",
+      "contentHash": "e3ffbab3b0f7b932595e2e25378b560054bf100b2b74e3dd25ed12d872fb634f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 43,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/datetime/logic/timing_input_logic_model.dart": {
+      "filePath": "lib/src/datetime/logic/timing_input_logic_model.dart",
+      "contentHash": "a29ac5960ef5cd1ffdfa6ffc0b492704c347f3829c5701191754928cedf35901",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/datetime/logic/timing_snapshot_logic_model.dart": {
+      "filePath": "lib/src/datetime/logic/timing_snapshot_logic_model.dart",
+      "contentHash": "ffef713848ff6504be51b699510c6d06cdb985adb130b516d708d0ab4264ae19",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/datetime/repository/strategy_config_data_model.dart": {
+      "filePath": "lib/src/datetime/repository/strategy_config_data_model.dart",
+      "contentHash": "2f760ec24987500fb09853def4eb63f98aebfc8a5ccb265125d60a5ad70ac158",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/datetime/repository/timing_snapshot_data_model.dart": {
+      "filePath": "lib/src/datetime/repository/timing_snapshot_data_model.dart",
+      "contentHash": "2989a49f4fc52d32322e72d2a7e4f3ace059f499399ba6c7a65e8048ca98418b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 67,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/logic/four_zhu_logic_model.dart": {
+      "filePath": "lib/src/four_zhu/logic/four_zhu_logic_model.dart",
+      "contentHash": "318d2bc1dbf796207d382241832a73299212db181e9e280294a3a8230d7c0a8b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/logic/pillar_data.dart": {
+      "filePath": "lib/src/four_zhu/logic/pillar_data.dart",
+      "contentHash": "b33be4853c5d6a9e9fe03f594f7c6c87f43473a17ff593314b9f73f9776eef1b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 36,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/logic/row_strategy.dart": {
+      "filePath": "lib/src/four_zhu/logic/row_strategy.dart",
+      "contentHash": "fd8754e348561df4e475863c35f255b0837cdd8e58c44e5a7549a7a53c5153be",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1071,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/logic/strategies/day_pillar_strategy.dart": {
+      "filePath": "lib/src/four_zhu/logic/strategies/day_pillar_strategy.dart",
+      "contentHash": "0207c2824cc833b6d0381aa7871c557a94e19c468830591da346e2f1e42d8cda",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/logic/strategies/hour_pillar_strategy.dart": {
+      "filePath": "lib/src/four_zhu/logic/strategies/hour_pillar_strategy.dart",
+      "contentHash": "2fac100bbcf6f2f5398653e952d60bd03aae970cd1469c2043005905c46f84b4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/logic/strategies/impl/day_0_boundary_strategy.dart": {
+      "filePath": "lib/src/four_zhu/logic/strategies/impl/day_0_boundary_strategy.dart",
+      "contentHash": "972c52171a10f2232fa38a11b6f6c4a008e7485ad37e395264ea125792044d85",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/logic/strategies/impl/day_23_boundary_strategy.dart": {
+      "filePath": "lib/src/four_zhu/logic/strategies/impl/day_23_boundary_strategy.dart",
+      "contentHash": "dd4e6150ed1f6f79dee781535b7da3c16646b021be87663a6c14a1a954655b82",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/logic/strategies/impl/hour_bands_start0_strategy.dart": {
+      "filePath": "lib/src/four_zhu/logic/strategies/impl/hour_bands_start0_strategy.dart",
+      "contentHash": "31c74be4db4527ef811531c6660a4060e12628c47d51e511c462fca82f5d3209",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/logic/strategies/impl/hour_five_mouse_dun_strategy.dart": {
+      "filePath": "lib/src/four_zhu/logic/strategies/impl/hour_five_mouse_dun_strategy.dart",
+      "contentHash": "bd9619120f8cf8260a52800ff8fb1378706c15e572eb7817b248c5df86fa4efd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/logic/strategies/impl/hour_fixed_zi_ping_strategy.dart": {
+      "filePath": "lib/src/four_zhu/logic/strategies/impl/hour_fixed_zi_ping_strategy.dart",
+      "contentHash": "35328d0482fb3f1e4654c17b5c70772a4f84f5f8d7374f9f1eaf66b0c64f77f7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 77,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/logic/type_converter.dart": {
+      "filePath": "lib/src/four_zhu/logic/type_converter.dart",
+      "contentHash": "dff7749dc19f389e401eaa6021f5ce3fece975f24a1eb025816569df8dec381e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 19,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/repository/four_zhu_record_data_model.dart": {
+      "filePath": "lib/src/four_zhu/repository/four_zhu_record_data_model.dart",
+      "contentHash": "0c7660edacf82adcf59d98b7215c48d1316c4b110b8d052cc79e1d88762bbe16",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/four_zhu/ui/four_zhu_card_ui_model.dart": {
+      "filePath": "lib/src/four_zhu/ui/four_zhu_card_ui_model.dart",
+      "contentHash": "6d332571ee5d7dce30f793566abd863b9a523e3030a195816215dedd61ad994d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 59,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/liu_yun/logic/liu_yun_logic_model.dart": {
+      "filePath": "lib/src/liu_yun/logic/liu_yun_logic_model.dart",
+      "contentHash": "ef5145fba56a2642a363b708df2a74b4a60a96697cdb8c2915f6fbf8ff25d47a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/liu_yun/repository/liu_yun_record_data_model.dart": {
+      "filePath": "lib/src/liu_yun/repository/liu_yun_record_data_model.dart",
+      "contentHash": "0016b997a8be7cc5c88a971104321aa5f9e9d3584cdc5932c1f550bb64b26f79",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 51,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/tai_yuan/logic/tai_yuan_logic_model.dart": {
+      "filePath": "lib/src/tai_yuan/logic/tai_yuan_logic_model.dart",
+      "contentHash": "47238d91ac985b07032eb63910456f1e0b458bce3737bae1b28b57efcdff3041",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 20,
+      "hasStructuralAnalysis": false
+    },
+    "lib/src/tai_yuan/repository/tai_yuan_record_data_model.dart": {
+      "filePath": "lib/src/tai_yuan/repository/tai_yuan_record_data_model.dart",
+      "contentHash": "9f35fb607f919000454697ae27ebe2f0a30642f60adf5264c0d693a9b2d3c243",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    "lib/utils/celestial_rise_set_calculator.dart": {
+      "filePath": "lib/utils/celestial_rise_set_calculator.dart",
+      "contentHash": "30f86e5c571bdd4da7254c0d4c6a5b7c33795c670c5efb5adfb0b63ba7b0266b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 410,
+      "hasStructuralAnalysis": false
+    },
+    "lib/utils/collections_utils.dart": {
+      "filePath": "lib/utils/collections_utils.dart",
+      "contentHash": "d585aa512d658d8ace52ae81523bc1224aae9917e78f0f7eaa72544f79c450c1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 48,
+      "hasStructuralAnalysis": false
+    },
+    "lib/utils/constant_values_utils.dart": {
+      "filePath": "lib/utils/constant_values_utils.dart",
+      "contentHash": "7f15b6d702826d30ad40152cb5b950c383fd7465315880a851bfea39c2645fae",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 86,
+      "hasStructuralAnalysis": false
+    },
+    "lib/utils/five_elements_colors.dart": {
+      "filePath": "lib/utils/five_elements_colors.dart",
+      "contentHash": "8afce07e4b97a85d67370790c2513e84c86d9d7cf8f0c3d45d466f5dd70fe56d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 113,
+      "hasStructuralAnalysis": false
+    },
+    "lib/utils/julian_day_converter.dart": {
+      "filePath": "lib/utils/julian_day_converter.dart",
+      "contentHash": "0ba12d247eaa4a06e05d042b134dce7a44dfb189d852f77ff36daea3a697bbaa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": false
+    },
+    "lib/utils/reorder_utils.dart": {
+      "filePath": "lib/utils/reorder_utils.dart",
+      "contentHash": "0c37866f6b08f654f214c98f329a16a3153f0335734e63a2ab4a723be7ffb83b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": false
+    },
+    "lib/utils/solar_time_calculator.dart": {
+      "filePath": "lib/utils/solar_time_calculator.dart",
+      "contentHash": "ea727713e2e97c125f5626935b81540a760441213b269b08cd1ebc3a69a930c5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 75,
+      "hasStructuralAnalysis": false
+    },
+    "pubspec.yaml": {
+      "filePath": "pubspec.yaml",
+      "contentHash": "52879842e13710fabc9178907784410da1b06d05a64a755630de36442e0b7605",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "test/layer_model_import_boundary_test.dart": {
+      "filePath": "test/layer_model_import_boundary_test.dart",
+      "contentHash": "892246752df90e75d144b3398f4389199feb28c4d29c510252737d3f49f85601",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 112,
+      "hasStructuralAnalysis": false
+    },
+    "test_step.txt": {
+      "filePath": "test_step.txt",
+      "contentHash": "701be7ae76851a45713dd5eae85792ac071d120b683e794d543bc5906594eac5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    }
+  }
+}

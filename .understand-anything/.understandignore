@@ -1,0 +1,30 @@
+# .understandignore — patterns for files/dirs to exclude from analysis
+# Syntax: same as .gitignore (globs, # comments, ! negation, trailing / for dirs)
+# Use ! prefix to force-include something excluded by defaults.
+#
+# Built-in defaults (always excluded unless negated):
+#   node_modules/, .git/, dist/, build/, obj/, *.lock, *.min.js, etc.
+#
+
+# --- Active exclusions (recommended for this Dart package) ---
+
+# Generated json_serializable code (32 files). Pure (de)serialization boilerplate
+# that mirrors the hand-written model sitting next to each one. Excluded to keep
+# the architecture graph focused on real domain code. Delete this line to include.
+*.g.dart
+
+# Dart tooling / generated manifests (not source).
+.dart_tool/
+.flutter-plugins-dependencies
+
+# --- Suggestions (uncomment to ALSO exclude) ---
+
+# Tests are KEPT on purpose: test/layer_model_import_boundary_test.dart is a
+# migration boundary guard and is analytically valuable.
+# test/
+
+# NOTE: The duplicated/legacy trees are intentionally KEPT so the knowledge graph
+# surfaces them as migration findings, e.g.:
+#   lib/domain/calculators/four_zhu/strategies/  vs  lib/src/four_zhu/logic/strategies/
+#   lib/helpers/solar_time_calculator.dart       vs  lib/utils/solar_time_calculator.dart
+#   lib/enums.dart  +  lib/enums/  +  lib/models/enums.dart   (three enum locations)

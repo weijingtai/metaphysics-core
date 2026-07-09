@@ -37,7 +37,10 @@ enum JieQiType {
   leveling("平气法"),
 
   @JsonValue('stabilizing')
-  stabilizing("定气法");
+  stabilizing("定气法"),
+
+  @JsonValue('trueSolar')
+  trueSolar("真太阳时");
 
   final String name;
   const JieQiType(this.name);
@@ -77,6 +80,23 @@ enum JieQiEntryPrecision {
   hour,
   @JsonValue("minute")
   minute,
+  @JsonValue("exactMinute")
+  exactMinute,
+  @JsonValue("second")
+  second,
+}
+
+/// 时间精度
+@JsonEnum()
+enum TimeAccuracy {
+  @JsonValue("shichen")
+  shichen,
+  @JsonValue("hour")
+  hour,
+  @JsonValue("minute")
+  minute,
+  @JsonValue("exactMinute")
+  exactMinute,
   @JsonValue("second")
   second,
 }

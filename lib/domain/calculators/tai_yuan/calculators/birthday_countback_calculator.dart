@@ -4,15 +4,11 @@ import 'package:tuple/tuple.dart';
 import '../../../../datamodel/datetime_divination_datamodel.dart';
 import '../../../../enums/datetime_strategy_enums.dart';
 import '../../../../helpers/solar_lunar_datetime_helper.dart';
-import '../../../../models/jie_qi_info.dart';
-import '../../../../models/seventy_two_phenology.dart';
 import '../tai_yuan_by_days_model.dart';
 import '../tai_yuan_calculator.dart';
 import '../tai_yuan_model.dart';
 import '../enum_calculate_strategy.dart';
 
-import 'package:metaphysics_core/enums/datetime_strategy_enums.dart';
-import 'package:metaphysics_core/models/calculation_strategy_config_logic_model.dart';
 
 /// 生日倒推法计算器
 class BirthdayCountbackCalculator extends TaiYuanCalculator {

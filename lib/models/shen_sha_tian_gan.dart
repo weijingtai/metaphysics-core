@@ -1,8 +1,6 @@
-import 'package:metaphysics_core/enums.dart';
 import 'package:metaphysics_core/metaphysics_core.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'shen_sha.dart';
 
 part 'shen_sha_tian_gan.g.dart';
 

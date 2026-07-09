@@ -3,7 +3,6 @@ import 'package:json_annotation/json_annotation.dart';
 import '../enums/enum_datetime_type.dart';
 import '../enums/enum_gender.dart';
 import '../models/eight_chars.dart';
-import 'geo_location.dart';
 import 'location.dart';
 
 part 'basic_person_info.g.dart';

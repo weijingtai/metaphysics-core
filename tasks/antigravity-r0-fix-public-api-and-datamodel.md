@@ -33,7 +33,7 @@ dart analyze
 
 ## 当前状态
 <由 antigravity 执行 Agent 维护>
-- 起步：调研报告已收到，等 Antigravity 接手执行 /resume
+- 起步：调研报告已收到，等 Antigravity 接手执行 /wjt-resume
 - 预期第一步 (1)：先读 metaphysics_core.dart 与 sp_location_datamodel.dart 摸清现状
 
 ## 决定记录

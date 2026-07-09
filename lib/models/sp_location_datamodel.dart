@@ -2,7 +2,16 @@ import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../datamodel/location.dart';
-import '../common_logger.dart';
+
+enum AppFeatureModule {
+  bazi,
+  ziwei,
+  qimen,
+  liuyao,
+  none;
+
+  String get spPrefix => "${name}_";
+}
 
 part 'sp_location_datamodel.g.dart';
 
@@ -22,7 +31,6 @@ class SPLocationDataModel extends Equatable {
 
   factory SPLocationDataModel.fromJson(Map<String, dynamic> json) =>
       _$SPLocationDataModelFromJson(json);
-  @override
   Map<String, dynamic> toJson() => _$SPLocationDataModelToJson(this);
 
   @override
@@ -56,7 +64,6 @@ class SPMyLocationDataModel extends Equatable {
 
   factory SPMyLocationDataModel.fromJson(Map<String, dynamic> json) =>
       _$SPMyLocationDataModelFromJson(json);
-  @override
   Map<String, dynamic> toJson() => _$SPMyLocationDataModelToJson(this);
 
   @override

@@ -1,8 +1,6 @@
 import 'package:metaphysics_core/enums.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'enum_five_xing.dart';
-import 'enum_yin_yang.dart';
 
 enum EnumStars {
   @JsonValue("日")

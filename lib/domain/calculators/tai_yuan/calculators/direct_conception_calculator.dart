@@ -1,11 +1,8 @@
-import 'package:metaphysics_core/enums.dart';
 import 'package:metaphysics_core/metaphysics_core.dart';
 import 'package:tyme/tyme.dart' hide Phenology;
 import 'package:tuple/tuple.dart';
 import '../../../../datamodel/datetime_divination_datamodel.dart';
 import '../../../../helpers/solar_lunar_datetime_helper.dart';
-import '../../../../models/jie_qi_info.dart';
-import '../../../../models/seventy_two_phenology.dart';
 import '../enum_calculate_strategy.dart';
 import '../tai_yuan_calculator.dart';
 import '../tai_yuan_model.dart';

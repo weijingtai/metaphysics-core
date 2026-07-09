@@ -1,9 +1,6 @@
-import 'package:metaphysics_core/datamodel/divination_type_data_model.dart';
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:metaphysics_core/enums.dart';
-import 'package:metaphysics_core/models/divination_datetime.dart';
-import 'package:metaphysics_core/enums/enum_gender.dart' hide Gender;
 
 part 'divination_data_model.g.dart';
 

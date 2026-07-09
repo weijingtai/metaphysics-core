@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:intl/intl.dart';
 import 'package:metaphysics_core/datamodel/location.dart';
@@ -213,6 +212,7 @@ class SolarLunarDateTimeHelper {
         case JieQiEntryPrecision.second:
           return false; // 精确到秒，不做同桶提前进入
         case JieQiEntryPrecision.minute:
+        case JieQiEntryPrecision.exactMinute:
           return a.year == b.year &&
               a.month == b.month &&
               a.day == b.day &&
@@ -559,6 +559,7 @@ class SolarLunarDateTimeHelper {
         case JieQiEntryPrecision.second:
           return false;
         case JieQiEntryPrecision.minute:
+        case JieQiEntryPrecision.exactMinute:
           return a.year == b.year &&
               a.month == b.month &&
               a.day == b.day &&

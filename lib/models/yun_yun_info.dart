@@ -23,7 +23,6 @@ class EachYuanYunInfo {
   factory EachYuanYunInfo.fromJson(Map<String, dynamic> json) =>
       _$EachYuanYunInfoFromJson(json);
 
-  @override
   Map<String, dynamic> toJson() => _$EachYuanYunInfoToJson(this);
 }
 

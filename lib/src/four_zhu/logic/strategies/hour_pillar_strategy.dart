@@ -1,5 +1,4 @@
 import 'package:metaphysics_core/enums/enum_jia_zi.dart';
-import 'package:metaphysics_core/enums/enum_tian_gan.dart';
 
 /// 决定时柱干支的策略
 abstract class HourPillarStrategy {

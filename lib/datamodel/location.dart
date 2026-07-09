@@ -73,6 +73,28 @@ class Address extends Equatable {
     return lowestGeoLocation.coordinates;
   }
 
+  String get formattedAddress {
+    String addr = province.name;
+    if (city != null && city!.name != province.name) {
+      addr += ' ${city!.name}';
+    } else if (city != null) {
+      addr += ' ${city!.name}';
+    }
+    if (area != null) {
+      addr += ' ${area!.name}';
+    }
+    // Simple fallback to just concatenate them, but usually they are concatenated without spaces in Chinese.
+    // Let's use simple concatenation without space.
+    String result = province.name;
+    if (city != null && city!.name != province.name) {
+      result += city!.name;
+    }
+    if (area != null) {
+      result += area!.name;
+    }
+    return result;
+  }
+
   String timezone;
 
   Address(

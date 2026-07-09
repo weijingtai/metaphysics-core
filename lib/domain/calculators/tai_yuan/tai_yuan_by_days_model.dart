@@ -1,9 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../../enums.dart';
-import 'package:metaphysics_core/metaphysics_core.dart';
-import '../../../models/jie_qi_info.dart';
-import 'enum_calculate_strategy.dart';
 import 'tai_yuan_model.dart';
 
 part 'tai_yuan_by_days_model.g.dart';

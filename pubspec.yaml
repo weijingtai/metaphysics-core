@@ -20,6 +20,9 @@ dependencies:
   sweph: ^3.2.1+2.10.3
   google_fonts: ^6.2.1
 
+  shared_preferences: any
+  flutter:
+    sdk: flutter
 dev_dependencies:
   test: ^1.25.0
   lints: ^5.0.0

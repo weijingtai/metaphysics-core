@@ -1,7 +1,6 @@
-import 'package:metaphysics_core/enums/enum_jia_zi.dart';
 import '../hour_pillar_strategy.dart';
 
-import '../../../../enums.dart';
+import 'package:metaphysics_core/enums.dart';
 
 /// 子平传统派：固定子段“地支为子/丑”，天干按序相续
 /// 23:00–00:00 固定为“N子”；00:00–01:00 固定为“(N+1)丑”

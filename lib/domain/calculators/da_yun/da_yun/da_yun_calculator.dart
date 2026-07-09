@@ -2,7 +2,6 @@ import 'package:metaphysics_core/enums.dart';
 import 'package:metaphysics_core/models/chinese_date_info.dart';
 import 'package:metaphysics_core/models/da_yun_pillar.dart';
 import 'package:tyme/tyme.dart' hide Gender;
-import 'package:intl/intl.dart';
 
 class DaYunCalculator {
   List<DaYunPillar> calculate({

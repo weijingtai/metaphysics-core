@@ -1,19 +1,20 @@
-import 'package:xuan_four_zhu_card/enums.dart';
+import 'package:metaphysics_core/enums.dart';
+import 'package:metaphysics_core/metaphysics_core.dart';
 import 'package:tuple/tuple.dart';
 
-import '../utils/constant_values_utils.dart';
-import 'pillar_content.dart';
+import 'package:metaphysics_core/utils/constant_values_utils.dart' hide FourZhuText;
+import 'pillar_data.dart';
 
 abstract class HouseCalculator {
   const HouseCalculator();
 
   Tuple2<TianGan, DiZhi>? calculateLifeHouse({
-    required List<PillarContent> pillars,
+    required List<PillarData> pillars,
     required DateTime? referenceDateTime,
   });
 
   Tuple2<TianGan, DiZhi>? calculateBodyHouse({
-    required List<PillarContent> pillars,
+    required List<PillarData> pillars,
     required DateTime? referenceDateTime,
   });
 
@@ -25,14 +26,14 @@ class _AbsentHouseCalculator extends HouseCalculator {
 
   @override
   Tuple2<TianGan, DiZhi>? calculateLifeHouse({
-    required List<PillarContent> pillars,
+    required List<PillarData> pillars,
     required DateTime? referenceDateTime,
   }) =>
       null;
 
   @override
   Tuple2<TianGan, DiZhi>? calculateBodyHouse({
-    required List<PillarContent> pillars,
+    required List<PillarData> pillars,
     required DateTime? referenceDateTime,
   }) =>
       null;
@@ -44,7 +45,7 @@ class RowComputationInput {
   /// 构造函数
   ///
   /// 参数：
-  /// - pillars: 卡片中所有柱的核心数据 `PillarContent` 列表（按当前顺序），用于跨柱计算。
+  /// - pillars: 卡片中所有柱的核心数据 `PillarData` 列表（按当前顺序），用于跨柱计算。
   /// - dayJiaZi: 出生日的甲子（包含日干日支），便于策略中引用“日元”。
   /// - gender: 性别（部分算法可能需要，如空亡/神煞类按性别不同）。
   /// - referenceDateTime: 参考的时间（可选），在需要具体历法时间计算时使用。
@@ -58,8 +59,8 @@ class RowComputationInput {
     this.context = const {},
   });
 
-  /// 卡片中的柱信息：核心数据 `PillarContent`（如 年/月/日/时/大运 等）。
-  final List<PillarContent> pillars;
+  /// 卡片中的柱信息：核心数据 `PillarData`（如 年/月/日/时/大运 等）。
+  final List<PillarData> pillars;
 
   /// 出生日的甲子（可由其中的天干视作“日元”）。
   final JiaZi dayJiaZi;
@@ -83,7 +84,7 @@ class RowComputationResult {
   /// 参数：
   /// - rowType: 行的类型（如 空亡/旬首/纳音 等），用于语义标识与样式选择。
   /// - rowLabel: 行标题（显示在左侧标题列）。
-  /// - perPillarValues: 每一柱对应的显示文本（键为柱唯一 `id`，避免类型冲突与重复列）。
+  /// - perPillarValues: 每一柱对应的显示文本（键为柱唯一 `pillarId`，避免类型冲突与重复列）。
   RowComputationResult({
     required this.rowType,
     required this.rowLabel,
@@ -94,7 +95,7 @@ class RowComputationResult {
   final String rowLabel;
 
   /// 每柱的渲染值：例如 {"year#1": "戌亥", "month#1": "子丑", "day#1": "寅卯", "hour#1": "辰巳"}。
-  /// 键使用 `PillarContent.id`，以便在存在多个相同类型柱（如多段大运）时正确区分。
+  /// 键使用 `PillarData.pillarId`，以便在存在多个相同类型柱（如多段大运）时正确区分。
   final Map<String, String> perPillarValues;
 
   /// 提供给上层使用的便捷数据结构，避免与 UI 层产生循环依赖。
@@ -131,8 +132,8 @@ class PillarComputationInput {
     this.context = const {},
   });
 
-  final PillarContent pillar;
-  final List<PillarContent> pillars;
+  final PillarData pillar;
+  final List<PillarData> pillars;
   final JiaZi dayJiaZi;
   final Gender gender;
   final DateTime? referenceDateTime;
@@ -164,7 +165,7 @@ abstract class PillarComputationStrategy {
     JiaZi pillarJiaZi,
     JiaZi dayJiaZi,
     Gender gender, {
-    List<PillarContent>? pillars,
+    List<PillarData>? pillars,
     DateTime? referenceDateTime,
     Map<String, dynamic> context = const {},
   });
@@ -186,7 +187,7 @@ class KongWangRowStrategy extends RowComputationStrategy {
     // 示例：将各柱的空亡占位为其自身的空亡值（真实算法请替换为项目内的实现）。
     for (final pillar in input.pillars) {
       final jz = pillar.jiaZi;
-      final pillarId = pillar.id;
+      final pillarId = pillar.pillarId;
       // 这里可替换为：final kw = jz.getKongWang(input.dayJiaZi.tianGan, input.gender);
       final kw = jz.getKongWang();
       values[pillarId] = '${kw.item1.value}${kw.item2.value}';
@@ -198,7 +199,7 @@ class KongWangRowStrategy extends RowComputationStrategy {
     );
   }
 
-  /// 不再依赖柱序映射，直接使用 `PillarContent.pillarType`。
+  /// 不再依赖柱序映射，直接使用 `PillarData.pillarType`。
   /// 计算单柱的空亡展示值。
   @override
   String computeSingleValue(JiaZi pillarJiaZi, JiaZi dayJiaZi, Gender gender) {
@@ -225,14 +226,14 @@ class YiMaRowStrategy extends RowComputationStrategy {
   /// 计算各柱的“驿马”文本。
   ///
   /// 参数：
-  /// - input: 其中使用每柱的 `PillarContent.jiaZi.zhi`（地支）推导驿马。
+  /// - input: 其中使用每柱的 `PillarData.jiaZi.zhi`（地支）推导驿马。
   ///
   /// 返回：每柱对应的驿马地支（单字）。
   @override
   RowComputationResult compute(RowComputationInput input) {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
-      values[pillar.id] = computeSingleValue(
+      values[pillar.pillarId] = computeSingleValue(
         pillar.jiaZi,
         input.dayJiaZi,
         input.gender,
@@ -291,14 +292,14 @@ class GuRowStrategy extends RowComputationStrategy {
   /// 计算各柱的“孤”文本。
   ///
   /// 参数：
-  /// - input: 使用每柱的 `PillarContent.jiaZi.getKongWang()` 推导旬空。
+  /// - input: 使用每柱的 `PillarData.jiaZi.getKongWang()` 推导旬空。
   ///
   /// 返回：每柱对应的旬空地支（两个字，例如“戌亥”）。
   @override
   RowComputationResult compute(RowComputationInput input) {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
-      values[pillar.id] = computeSingleValue(
+      values[pillar.pillarId] = computeSingleValue(
         pillar.jiaZi,
         input.dayJiaZi,
         input.gender,
@@ -346,7 +347,7 @@ class XuRowStrategy extends RowComputationStrategy {
   RowComputationResult compute(RowComputationInput input) {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
-      values[pillar.id] = computeSingleValue(
+      values[pillar.pillarId] = computeSingleValue(
         pillar.jiaZi,
         input.dayJiaZi,
         input.gender,
@@ -391,7 +392,7 @@ class XunShouRowStrategy extends RowComputationStrategy {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
       final pillarJiaZi = pillar.jiaZi;
-      final pillarId = pillar.id;
+      final pillarId = pillar.pillarId;
       // TODO: 这里填入旬首的实际算法：根据 pillarJiaZi 与 dayJiaZi（视作日元）计算旬与旬首。
       final xunShou = _computeXunShouPlaceholder(pillarJiaZi, input.dayJiaZi);
       values[pillarId] = xunShou;
@@ -408,7 +409,7 @@ class XunShouRowStrategy extends RowComputationStrategy {
     return JiaZi.JIA_ZI.ganZhiStr;
   }
 
-  /// 不再依赖柱序映射，直接使用 `PillarContent.pillarType`。
+  /// 不再依赖柱序映射，直接使用 `PillarData.pillarType`。
   /// 计算单柱的旬首展示值。
   @override
   String computeSingleValue(JiaZi pillarJiaZi, JiaZi dayJiaZi, Gender gender) {
@@ -431,14 +432,14 @@ class NaYinRowStrategy extends RowComputationStrategy {
   /// 核心计算：遍历输入中的各柱数据，使用 `JiaZi.naYinStr` 生成每柱的纳音文本。
   ///
   /// 参数：
-  /// - input: 包含所有柱的 `PillarContent`、日柱甲子（dayJiaZi）与性别等上下文。
+  /// - input: 包含所有柱的 `PillarData`、日柱甲子（dayJiaZi）与性别等上下文。
   ///
   /// 返回：`RowComputationResult`，其中 `perPillarValues` 为 {柱类型: 纳音字符串} 映射。
   @override
   RowComputationResult compute(RowComputationInput input) {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
-      final pillarId = pillar.id;
+      final pillarId = pillar.pillarId;
       final jiaZi = pillar.jiaZi;
       values[pillarId] = jiaZi.naYinStr;
     }
@@ -449,7 +450,7 @@ class NaYinRowStrategy extends RowComputationStrategy {
     );
   }
 
-  /// 不再依赖柱序映射，直接使用 `PillarContent.pillarType`。
+  /// 不再依赖柱序映射，直接使用 `PillarData.pillarType`。
   /// 计算单柱的纳音展示值。
   @override
   String computeSingleValue(JiaZi pillarJiaZi, JiaZi dayJiaZi, Gender gender) {
@@ -473,7 +474,7 @@ class TenGodRowStrategy extends RowComputationStrategy {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
       final pillarJiaZi = pillar.jiaZi;
-      final pillarId = pillar.id;
+      final pillarId = pillar.pillarId;
       if (pillar.pillarType == PillarType.day) {
         values[pillarId] = _dayPillarTenGodPlaceholder(input.gender);
         continue;
@@ -488,7 +489,7 @@ class TenGodRowStrategy extends RowComputationStrategy {
     );
   }
 
-  /// 不再依赖柱序映射，直接使用 `PillarContent.pillarType`。
+  /// 不再依赖柱序映射，直接使用 `PillarData.pillarType`。
   /// 计算单柱的十神展示值。
   @override
   String computeSingleValue(JiaZi pillarJiaZi, JiaZi dayJiaZi, Gender gender) {
@@ -497,7 +498,7 @@ class TenGodRowStrategy extends RowComputationStrategy {
   }
 }
 
-class HiddenStemsRowStrategy extends RowComputationStrategy {
+class HpillarIddenStemsRowStrategy extends RowComputationStrategy {
   @override
   RowType get rowType => RowType.hiddenStems;
 
@@ -509,7 +510,7 @@ class HiddenStemsRowStrategy extends RowComputationStrategy {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
       final pillarJiaZi = pillar.jiaZi;
-      final pillarId = pillar.id;
+      final pillarId = pillar.pillarId;
       final hiddenStems = pillarJiaZi.diZhi.cangGan;
       values[pillarId] = hiddenStems.map((e) => e.name).join();
     }
@@ -520,7 +521,7 @@ class HiddenStemsRowStrategy extends RowComputationStrategy {
     );
   }
 
-  /// 不再依赖柱序映射，直接使用 `PillarContent.pillarType`。
+  /// 不再依赖柱序映射，直接使用 `PillarData.pillarType`。
   /// 计算单柱的藏干十神展示值。
   @override
   String computeSingleValue(JiaZi pillarJiaZi, JiaZi dayJiaZi, Gender gender) {
@@ -530,7 +531,7 @@ class HiddenStemsRowStrategy extends RowComputationStrategy {
   }
 }
 
-class HiddenStemsTenGodsRowStrategy extends RowComputationStrategy {
+class HpillarIddenStemsTenGodsRowStrategy extends RowComputationStrategy {
   @override
   RowType get rowType => RowType.hiddenStemsTenGod;
 
@@ -542,7 +543,7 @@ class HiddenStemsTenGodsRowStrategy extends RowComputationStrategy {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
       final pillarJiaZi = pillar.jiaZi;
-      final pillarId = pillar.id;
+      final pillarId = pillar.pillarId;
       final hiddenStems = pillarJiaZi.diZhi.cangGan;
       final tenGods =
           hiddenStems.map((h) => h.getTenGods(input.dayJiaZi.tianGan));
@@ -564,7 +565,7 @@ class HiddenStemsTenGodsRowStrategy extends RowComputationStrategy {
 }
 
 /// 藏干主气行策略：显示每柱地支的藏干主气。
-class HiddenStemsPrimaryRowStrategy extends RowComputationStrategy {
+class HpillarIddenStemsPrimaryRowStrategy extends RowComputationStrategy {
   @override
   RowType get rowType => RowType.hiddenStemsPrimary;
 
@@ -576,8 +577,8 @@ class HiddenStemsPrimaryRowStrategy extends RowComputationStrategy {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
       final pillarJiaZi = pillar.jiaZi;
-      final pillarId = pillar.id;
-      final primary = _computeHiddenStemsPrimaryPlaceholder(pillarJiaZi);
+      final pillarId = pillar.pillarId;
+      final primary = _computeHpillarIddenStemsPrimaryPlaceholder(pillarJiaZi);
       values[pillarId] = primary;
     }
     return RowComputationResult(
@@ -587,7 +588,7 @@ class HiddenStemsPrimaryRowStrategy extends RowComputationStrategy {
     );
   }
 
-  String _computeHiddenStemsPrimaryPlaceholder(JiaZi pillarJiaZi) {
+  String _computeHpillarIddenStemsPrimaryPlaceholder(JiaZi pillarJiaZi) {
     // 占位实现：返回藏干列表的第一个元素
     final hiddenStems = pillarJiaZi.diZhi.cangGan;
     return hiddenStems.isNotEmpty ? hiddenStems.first.name : '';
@@ -601,7 +602,7 @@ class HiddenStemsPrimaryRowStrategy extends RowComputationStrategy {
 }
 
 /// 藏干中气行策略：显示每柱地支的藏干中气。
-class HiddenStemsSecondaryRowStrategy extends RowComputationStrategy {
+class HpillarIddenStemsSecondaryRowStrategy extends RowComputationStrategy {
   @override
   RowType get rowType => RowType.hiddenStemsSecondary;
 
@@ -613,9 +614,9 @@ class HiddenStemsSecondaryRowStrategy extends RowComputationStrategy {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
       final pillarJiaZi = pillar.jiaZi;
-      final pillarId = pillar.id;
+      final pillarId = pillar.pillarId;
       // TODO: 这里填入藏干中气的实际算法：取藏干列表的第二个（中气）
-      final secondary = _computeHiddenStemsSecondaryPlaceholder(pillarJiaZi);
+      final secondary = _computeHpillarIddenStemsSecondaryPlaceholder(pillarJiaZi);
       values[pillarId] = secondary;
     }
     return RowComputationResult(
@@ -625,7 +626,7 @@ class HiddenStemsSecondaryRowStrategy extends RowComputationStrategy {
     );
   }
 
-  String _computeHiddenStemsSecondaryPlaceholder(JiaZi pillarJiaZi) {
+  String _computeHpillarIddenStemsSecondaryPlaceholder(JiaZi pillarJiaZi) {
     // 占位实现：返回藏干列表的第二个元素
     final hiddenStems = pillarJiaZi.diZhi.cangGan;
     return hiddenStems.length > 1 ? hiddenStems[1].name : '';
@@ -639,7 +640,7 @@ class HiddenStemsSecondaryRowStrategy extends RowComputationStrategy {
 }
 
 /// 藏干余气行策略：显示每柱地支的藏干余气。
-class HiddenStemsTertiaryRowStrategy extends RowComputationStrategy {
+class HpillarIddenStemsTertiaryRowStrategy extends RowComputationStrategy {
   @override
   RowType get rowType => RowType.hiddenStemsTertiary;
 
@@ -651,9 +652,9 @@ class HiddenStemsTertiaryRowStrategy extends RowComputationStrategy {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
       final pillarJiaZi = pillar.jiaZi;
-      final pillarId = pillar.id;
+      final pillarId = pillar.pillarId;
       // TODO: 这里填入藏干余气的实际算法：取藏干列表的第三个（余气）
-      final tertiary = _computeHiddenStemsTertiaryPlaceholder(pillarJiaZi);
+      final tertiary = _computeHpillarIddenStemsTertiaryPlaceholder(pillarJiaZi);
       values[pillarId] = tertiary;
     }
     return RowComputationResult(
@@ -663,7 +664,7 @@ class HiddenStemsTertiaryRowStrategy extends RowComputationStrategy {
     );
   }
 
-  String _computeHiddenStemsTertiaryPlaceholder(JiaZi pillarJiaZi) {
+  String _computeHpillarIddenStemsTertiaryPlaceholder(JiaZi pillarJiaZi) {
     // 占位实现：返回藏干列表的第三个元素
     final hiddenStems = pillarJiaZi.diZhi.cangGan;
     return hiddenStems.length > 2 ? hiddenStems[2].name : '';
@@ -677,7 +678,7 @@ class HiddenStemsTertiaryRowStrategy extends RowComputationStrategy {
 }
 
 /// 藏干主气十神行策略：显示每柱地支藏干主气的十神。
-class HiddenStemsPrimaryGodsRowStrategy extends RowComputationStrategy {
+class HpillarIddenStemsPrimaryGodsRowStrategy extends RowComputationStrategy {
   @override
   RowType get rowType => RowType.hiddenStemsPrimaryGods;
 
@@ -689,8 +690,8 @@ class HiddenStemsPrimaryGodsRowStrategy extends RowComputationStrategy {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
       final pillarJiaZi = pillar.jiaZi;
-      final pillarId = pillar.id;
-      final primaryGod = _computeHiddenStemsPrimaryGodPlaceholder(
+      final pillarId = pillar.pillarId;
+      final primaryGod = _computeHpillarIddenStemsPrimaryGodPlaceholder(
         pillarJiaZi,
         input.dayJiaZi,
         input.isShortName,
@@ -704,7 +705,7 @@ class HiddenStemsPrimaryGodsRowStrategy extends RowComputationStrategy {
     );
   }
 
-  String _computeHiddenStemsPrimaryGodPlaceholder(
+  String _computeHpillarIddenStemsPrimaryGodPlaceholder(
     JiaZi pillarJiaZi,
     JiaZi dayJiaZi,
     bool isShortName,
@@ -726,7 +727,7 @@ class HiddenStemsPrimaryGodsRowStrategy extends RowComputationStrategy {
 }
 
 /// 藏干中气十神行策略：显示每柱地支藏干中气的十神。
-class HiddenStemsSecondaryGodsRowStrategy extends RowComputationStrategy {
+class HpillarIddenStemsSecondaryGodsRowStrategy extends RowComputationStrategy {
   @override
   RowType get rowType => RowType.hiddenStemsSecondaryGods;
 
@@ -738,8 +739,8 @@ class HiddenStemsSecondaryGodsRowStrategy extends RowComputationStrategy {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
       final pillarJiaZi = pillar.jiaZi;
-      final pillarId = pillar.id;
-      final secondaryGod = _computeHiddenStemsSecondaryGodPlaceholder(
+      final pillarId = pillar.pillarId;
+      final secondaryGod = _computeHpillarIddenStemsSecondaryGodPlaceholder(
         pillarJiaZi,
         input.dayJiaZi,
         input.isShortName,
@@ -753,7 +754,7 @@ class HiddenStemsSecondaryGodsRowStrategy extends RowComputationStrategy {
     );
   }
 
-  String _computeHiddenStemsSecondaryGodPlaceholder(
+  String _computeHpillarIddenStemsSecondaryGodPlaceholder(
     JiaZi pillarJiaZi,
     JiaZi dayJiaZi,
     bool isShortName,
@@ -775,7 +776,7 @@ class HiddenStemsSecondaryGodsRowStrategy extends RowComputationStrategy {
 }
 
 /// 藏干余气十神行策略：显示每柱地支藏干余气的十神。
-class HiddenStemsTertiaryGodsRowStrategy extends RowComputationStrategy {
+class HpillarIddenStemsTertiaryGodsRowStrategy extends RowComputationStrategy {
   @override
   RowType get rowType => RowType.hiddenStemsTertiaryGods;
 
@@ -787,8 +788,8 @@ class HiddenStemsTertiaryGodsRowStrategy extends RowComputationStrategy {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
       final pillarJiaZi = pillar.jiaZi;
-      final pillarId = pillar.id;
-      final tertiaryGod = _computeHiddenStemsTertiaryGodPlaceholder(
+      final pillarId = pillar.pillarId;
+      final tertiaryGod = _computeHpillarIddenStemsTertiaryGodPlaceholder(
         pillarJiaZi,
         input.dayJiaZi,
         input.isShortName,
@@ -802,7 +803,7 @@ class HiddenStemsTertiaryGodsRowStrategy extends RowComputationStrategy {
     );
   }
 
-  String _computeHiddenStemsTertiaryGodPlaceholder(
+  String _computeHpillarIddenStemsTertiaryGodPlaceholder(
     JiaZi pillarJiaZi,
     JiaZi dayJiaZi,
     bool isShortName,
@@ -836,7 +837,7 @@ class StarYunRowStrategy extends RowComputationStrategy {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
       final pillarJiaZi = pillar.jiaZi;
-      final pillarId = pillar.id;
+      final pillarId = pillar.pillarId;
       // TODO: 这里填入星运的实际算法
       final starYun = _computeStarYunPlaceholder(pillarJiaZi, input.dayJiaZi);
       values[pillarId] = starYun;
@@ -874,7 +875,7 @@ class SelfSitingRowStrategy extends RowComputationStrategy {
     final Map<String, String> values = {};
     for (final pillar in input.pillars) {
       final pillarJiaZi = pillar.jiaZi;
-      final pillarId = pillar.id;
+      final pillarId = pillar.pillarId;
       // TODO: 这里填入自坐的实际算法
       final selfSiting =
           _computeSelfSitingPlaceholder(pillarJiaZi, input.dayJiaZi);
@@ -940,7 +941,7 @@ abstract class _BaseHousePillarStrategy implements PillarComputationStrategy {
     JiaZi pillarJiaZi,
     JiaZi dayJiaZi,
     Gender gender, {
-    List<PillarContent>? pillars,
+    List<PillarData>? pillars,
     DateTime? referenceDateTime,
     Map<String, dynamic> context = const {},
   }) {
@@ -1013,7 +1014,7 @@ abstract class _BaseHousePillarStrategy implements PillarComputationStrategy {
   }
 
   Tuple2<TianGan, DiZhi>? _computeHouse({
-    required List<PillarContent>? pillars,
+    required List<PillarData>? pillars,
     required DateTime? referenceDateTime,
   }) {
     if (pillars == null || referenceDateTime == null) return null;

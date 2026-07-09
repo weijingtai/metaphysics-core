@@ -1,9 +1,7 @@
-import 'package:metaphysics_core/models/divination_datetime.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'package:metaphysics_core/enums.dart';
 import 'datetime_divination_datamodel.dart';
-import 'location.dart';
 
 part 'seeker_model.g.dart';
 

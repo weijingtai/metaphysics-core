@@ -1,10 +1,6 @@
-import 'package:metaphysics_core/models/divination_datetime.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import '../enums/enum_datetime_type.dart';
-import '../enums/enum_jia_zi.dart';
 import 'datetime_divination_datamodel.dart';
-import 'location.dart';
 
 part 'timing_divination_model.g.dart';
 

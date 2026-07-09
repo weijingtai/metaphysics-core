@@ -1,4 +1,4 @@
-import '../../day_pillar_strategy.dart';
+import '../day_pillar_strategy.dart';
 
 /// 23:00 为换日界线（子初/子平新派）
 class Day23BoundaryStrategy implements DayPillarStrategy {

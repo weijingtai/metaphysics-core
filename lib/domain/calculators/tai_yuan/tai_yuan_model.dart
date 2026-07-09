@@ -2,8 +2,6 @@ import 'package:metaphysics_core/metaphysics_core.dart';
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:metaphysics_core/metaphysics_core.dart';
-import '../../models/jie_qi_info.dart';
 import 'enum_calculate_strategy.dart';
 
 part 'tai_yuan_model.g.dart';

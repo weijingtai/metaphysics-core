@@ -35,7 +35,7 @@ class DayMasterYinYangCalculator extends TaiYuanCalculator {
     final taiYuanDiZhi = birthInfo.monthGanZhi.diZhi;
 
     final taiYuanGanZhi =
-        JiaZi.getFromGanZhiEnum(taiYuanTianGan, taiYuanDiZhi)!;
+        JiaZi.getFromGanZhiEnum(taiYuanTianGan, taiYuanDiZhi);
 
     return TaiYuanModel(
       calculateStrategy: strategy,

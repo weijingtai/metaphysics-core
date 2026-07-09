@@ -1,7 +1,5 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:sweph/sweph.dart';
-import 'basic_person_info.dart' as my;
 import 'location.dart' as my;
 part 'geo_location.g.dart';
 

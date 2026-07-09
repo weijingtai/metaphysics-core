@@ -32,12 +32,14 @@ class JieQiEntryStrategyStore {
         JieQiEntryPrecision.shichen => 'shichen',
         JieQiEntryPrecision.hour => 'hour',
         JieQiEntryPrecision.minute => 'minute',
+        JieQiEntryPrecision.exactMinute => 'exactMinute',
         JieQiEntryPrecision.second => 'second',
       };
   static JieQiEntryPrecision? _parse(String? s) => switch (s) {
         'shichen' => JieQiEntryPrecision.shichen,
         'hour' => JieQiEntryPrecision.hour,
         'minute' => JieQiEntryPrecision.minute,
+        'exactMinute' => JieQiEntryPrecision.exactMinute,
         'second' => JieQiEntryPrecision.second,
         // 兼容旧值
         'minuteSecond' => JieQiEntryPrecision.minute,

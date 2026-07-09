@@ -3,6 +3,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../datamodel/location.dart';
 
+part 'sp_location_datamodel.g.dart';
+
 enum AppFeatureModule {
   bazi,
   ziwei,
@@ -12,8 +14,6 @@ enum AppFeatureModule {
 
   String get spPrefix => "${name}_";
 }
-
-part 'sp_location_datamodel.g.dart';
 
 @JsonSerializable()
 class SPLocationDataModel extends Equatable {

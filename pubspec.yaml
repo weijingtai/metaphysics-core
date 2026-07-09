@@ -21,7 +21,8 @@ dependencies:
   google_fonts: ^6.2.1
 
   shared_preferences: any
-  flutter: any
+  flutter:
+    sdk: flutter
 dev_dependencies:
   test: ^1.25.0
   lints: ^5.0.0

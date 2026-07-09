@@ -2,7 +2,7 @@ import 'package:metaphysics_core/enums.dart';
 import 'package:metaphysics_core/metaphysics_core.dart';
 import 'package:tuple/tuple.dart';
 
-import '../utils/constant_values_utils.dart';
+import 'package:metaphysics_core/utils/constant_values_utils.dart' hide FourZhuText;
 import 'pillar_data.dart';
 
 abstract class HouseCalculator {

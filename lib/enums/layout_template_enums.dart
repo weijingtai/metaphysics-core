@@ -38,8 +38,8 @@ enum PillarType {
   @JsonValue('row_title_column')
   rowTitleColumn('行标题列');
 
-  final String name;
-  const PillarType(this.name);
+  final String label;
+  const PillarType(this.label);
 }
 
 enum RowType {

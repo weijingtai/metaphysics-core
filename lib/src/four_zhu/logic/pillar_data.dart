@@ -4,11 +4,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'package:metaphysics_core/enums/layout_template_enums.dart';
 
-// Backward-compat re-exports preserved from the previous placeholder file.
-// Do not remove without auditing downstream callers.
-export 'package:metaphysics_core/models/eight_chars.dart';
-export '../repository/four_zhu_record_data_model.dart';
-
 part 'pillar_data.g.dart';
 
 @JsonSerializable()

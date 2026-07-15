@@ -18,13 +18,11 @@ dependencies:
   timezone: ^0.9.3
   flutter_timezone: ^5.0.1
   sweph: ^3.2.1+2.10.3
-  google_fonts: ^6.2.1
-
   shared_preferences: any
-  flutter:
-    sdk: flutter
+
+
 dev_dependencies:
   test: ^1.25.0
   lints: ^5.0.0
-  build_runner: ^2.10.5
+  build_runner: 2.15.1
   json_serializable: ^6.12.0
